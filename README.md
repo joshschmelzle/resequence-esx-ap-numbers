@@ -2,7 +2,7 @@
 
 Resequence Ekahau's Site Survey (.esx accessPoints.json) Access Point (AP) names using Python.
 
-in no particular order, the new AP #'s will never be higher than the total number of APs.
+In no particular order, the new AP #'s will never be higher than the total number of APs.
 
 # requirements
 
