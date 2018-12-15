@@ -40,4 +40,4 @@ Tested with Python 3.6.4, Windows 10 Enterprise (10.0.16299 N/A Build 16299), Ek
 
 # license
 
-project license can be found [here](https://github.com/joshschmelzle/netsh_quality_to_dbm/blob/master/LICENSE)
+project license can be found [here](https://github.com/joshschmelzle/resequence_esx_ap_numbers/blob/master/LICENSE)
