@@ -1,8 +1,18 @@
 # resequence_esx_ap_numbers
 
-Rename and resequence Ekahau Site Survey's (.esx accessPoints.json) Access Point (AP) names using Python.
+Rename and resequence Ekahau Site Survey's Access Point (AP) names using Python.
 
-> **WARNING: the number in the name will, in no particular order, be changed. don't use this script if you care about that.**
+An Ekahau Site Survey project is stored as a compressed file with an extension `.esx`. Inside, it contains several JavaScript Object Notation (JSON) files that help organize project data. In particular, `accessPoints.json` contains information for the project's Access Points which will be what this script modifies. All AP names are changed, and the number included in the name is resequenced in a seemingly random order.
+
+> **WARNING: the number from the original AP name will, in no particular order, be changed. don't use this script if you care about that.**
+
+# todo
+
+- [ ] eliminate manual steps; retrieve accessPoints.json directly from .ESX file using zipfile 
+- [ ] programmatically replace existing accessPoints.json in .ESX file the modifeid one. 
+- [ ] backups! automatically copy and backup .ESX to a new file stamped with an ISO 8601 format.
+  - [ ] check both files to ensure they are the same, if not, don't allow the script to proceed.
+- [ ] add logging
 
 # requirements
 
@@ -32,7 +42,7 @@ Tested with Python 3.6.4, Windows 10 Enterprise (10.0.16299 N/A Build 16299), Ek
 
 ![](https://github.com/joshschmelzle/resequence_esx_ap_numbers/blob/master/aruba325before.PNG)
 
-## after
+## aftertJSON
 
 ![](https://github.com/joshschmelzle/resequence_esx_ap_numbers/blob/master/aruba325after.PNG)
 
