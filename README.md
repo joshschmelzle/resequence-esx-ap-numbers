@@ -6,13 +6,15 @@ An Ekahau Site Survey project is stored as a compressed file with an extension `
 
 > **WARNING: the number from the original AP name will, in no particular order, be changed. don't use this script if you care about that.**
 
-# todo
+# ~~todo~~ 0.0.2-dirty branch
 
-- [ ] cut out manual steps; retrieve accessPoints.json from `.esx` file using Python's zipfile 
-- [ ] programmatically replace existing accessPoints.json. 
-- [ ] backups! copy and backup .ESX to a new file stamped with an ISO 8601 format.
-  - [ ] check that both files are the same. if not, don't allow the script to proceed.
-- [ ] add logging
+needs refactored and cleaned up, but script can now open `.esx` project, modify `accessPoints.json`, and repackage `.esx`. it will create backup files automatically, and also produce logs in `log/`. 
+
+- [x] cut out manual steps; retrieve accessPoints.json from `.esx` file using Python's zipfile 
+- [x] programmatically replace existing accessPoints.json. 
+- [x] backups! copy and backup .ESX to a new file stamped with an ISO 8601 format.
+  - [x] check that both files are the same. if not, don't allow the script to proceed.
+- [x] add logging
 
 # requirements
 
