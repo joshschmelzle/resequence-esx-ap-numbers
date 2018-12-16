@@ -45,7 +45,7 @@ def main():
         
         # write modified json to new file
         with open('accessPoints-resequenced.json', 'w') as out:
-            json.dump(data, out)
+            json.dump(data, out, indent=4)
     except FileNotFoundError:
         print("could not find {}".format(filename))
     except ValueError:
