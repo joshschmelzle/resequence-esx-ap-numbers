@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-""" A utility will rename and resequence Ekahau Site Survey AP names
+""" A utility that will rename and resequence Ekahau Site Survey AP names
 
 * The AP name will never include a number higher than the total number of APs listed in accessPoints.json.
 * WARNING: The original number that is in the AP name will change. You may care about this, and if so, don't use this script.
