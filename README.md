@@ -42,7 +42,7 @@ Tested with Python 3.6.4, Windows 10 Enterprise (10.0.16299 N/A Build 16299), Ek
 
 ![](https://github.com/joshschmelzle/resequence_esx_ap_numbers/blob/master/aruba325before.PNG)
 
-## aftertJSON
+## after
 
 ![](https://github.com/joshschmelzle/resequence_esx_ap_numbers/blob/master/aruba325after.PNG)
 
