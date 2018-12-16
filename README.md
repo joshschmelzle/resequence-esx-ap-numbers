@@ -24,7 +24,7 @@ Tested with Python 3.6.4, Windows 10 Enterprise (10.0.16299 N/A Build 16299), Ek
 
 - step 1. make a backup of your `.esx` project file to ensure you have a safe backup
   - this is important.
-- step 2. open the .ESX (zip archive) with something like 7-Zip. Do not need to extract the entire contents. we're only after `accessPoints.json`.
+- step 2. open the `.esx` (it's an archive file) with a program like 7-Zip. you do not need to extract the entire contents. we're only after `accessPoints.json`.
 - step 3. pull out the `accessPoints.json` file and put it in the same directory as the script
 - step 4. run the script. 
   - you will see old and new AP names printed to the screen. and finally, you will see a new JSON file called `accessPoints-resequenced.json`. for first run/testing, keep a copy of both for backup/correlation.
