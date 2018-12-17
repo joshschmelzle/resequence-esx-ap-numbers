@@ -23,7 +23,7 @@ Run this script from the same directory as your .esx project.
 # todo
 
 - [ ] implement args parsing
-- [ ] use `.esx` project instead of `projectFile = "sample.esx"`
+- [ ] use `.esx` project from args, instead of `projectFile = "sample.esx"` in `main()`
 - [ ] refactor
 - [ ] add logging
 
