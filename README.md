@@ -2,53 +2,71 @@
 
 Rename and resequence Ekahau Site Survey's (ESS) Access Point (AP) names using Python.
 
-An Ekahau Site Survey project is stored as a compressed file with an extension `.esx`. Inside, it contains several JavaScript Object Notation (JSON) files that help organize project data. `accessPoints.json` contains information for the project's Access Points. All AP names will change, and the number included in the name is re-sequenced in no particular order.
+Project contents for Ekahau Site Survey are stored as a compressed file with an extension `.esx`. Inside, it contains several JavaScript Object Notation (JSON) files that help organize project data. One of them called `accessPoints.json` contains information for the project's Access Points. 
 
-> **WARNING: the number from the original AP name will, in no particular order, be changed. don't use this script if you care about that.**
+This script opens the `.esx` file, pulls out the `accessPoints.json`, renames and resequences the AP names/numbers, and then repackages the project file. The script will create a backup before doing anything to your project. 
 
-# todo
+It's important to note that all AP names will change, and the number included in the name is re-sequenced in no particular order.
 
-- [ ] cut out manual steps; retrieve accessPoints.json from `.esx` file using Python's zipfile 
-- [ ] programmatically replace existing accessPoints.json. 
-- [ ] backups! copy and backup .ESX to a new file stamped with an ISO 8601 format.
-  - [ ] check that both files are the same. if not, don't allow the script to proceed.
-- [ ] add logging
+> **WARNING: the number in the original name will in no particular order be changed. if you care about your existing AP numbers don't use this script.**
 
 # requirements
 
-Python 3.5 or greater installed
+Python 3.5 or greater installed.
 
 Tested with Python 3.6.4, Windows 10 Enterprise (10.0.16299 N/A Build 16299), Ekahau ESS Pro 9.2.5.260. 
 
 # usage
 
-- step 1. make a backup of your `.esx` project file to ensure you have a safe backup
-  - this is important.
-- step 2. open the `.esx` (it's an archive file) with a program like 7-Zip. you do not need to extract the entire contents. we're only after `accessPoints.json`.
-- step 3. pull out the `accessPoints.json` file and put it in the same directory as the script
-- step 4. run the script. 
-  - you will see old and new AP names printed to the screen. and finally, you will see a new JSON file called `accessPoints-resequenced.json`. for first run/testing, keep a copy of both for backup/correlation.
-- step 5. open the `.esx` and replace the existing accessPoints.json with the new one. 
-  - the new one must have the name `accessPoints.json`.
-- step 6. open the project in ESS (if you already have it open go to `File > Open` or `CTRL + O` on Windows).
+Run this script from the same directory as your .esx project.
 
-# example
+# todo
 
-## script
+- [ ] implement args parsing
+- [ ] use `.esx` project instead of `projectFile = "sample.esx"`
+- [ ] refactor
+- [ ] add logging
 
-![](https://github.com/joshschmelzle/resequence_esx_ap_numbers/blob/master/resequenceAPs.png)
+# example output
 
-## before
-
-![](https://github.com/joshschmelzle/resequence_esx_ap_numbers/blob/master/aruba325before.PNG)
-
-## after
-
-![](https://github.com/joshschmelzle/resequence_esx_ap_numbers/blob/master/aruba325after.PNG)
-
-# warning
-
-This script will change the name of your Access Points. The AP number in the original name will not match the new name. If this isn't desirable, do not use this script.
+```
+>new-esx-file-update-accesspoints-json.py
+current directory: C:\Users\josh\dev\python\ekahau-ap-rename
+file: sample.esx
+name: sample
+extension: esx
+current: C:\Users\josh\dev\python\ekahau-ap-rename\sample.esx
+backup: C:\Users\josh\dev\python\ekahau-ap-rename\sample.20181217t080936.esx.bak
+accessPoints.json is 8995 bytes
+copy of old json wrote to accessPoints.old.20181217t080936.json
+accessPoints.old.20181217t080936.json is 11594 bytes
+old: Aruba AP-325 (22) - new: AP1
+old: Aruba AP-325 (13) - new: AP2
+old: Aruba AP-325 (24) - new: AP3
+old: Aruba AP-325 (16) - new: AP4
+old: Aruba AP-325 (7) - new: AP5
+old: Aruba AP-325 (19) - new: AP6
+old: Aruba AP-325 (21) - new: AP7
+old: Aruba AP-325 (1) - new: AP8
+old: Aruba AP-325 (6) - new: AP9
+old: Aruba AP-325 (11) - new: AP10
+old: Aruba AP-325 (9) - new: AP11
+old: Aruba AP-325 (2) - new: AP12
+old: Aruba AP-325 (5) - new: AP13
+old: Aruba AP-325 (23) - new: AP14
+old: Aruba AP-325 (15) - new: AP15
+old: Aruba AP-325 (4) - new: AP16
+old: Aruba AP-325 (14) - new: AP17
+old: Aruba AP-325 (20) - new: AP18
+old: Aruba AP-325 (10) - new: AP19
+old: Aruba AP-325 (12) - new: AP20
+old: Aruba AP-325 (8) - new: AP21
+old: Aruba AP-325 (18) - new: AP22
+old: Aruba AP-325 (3) - new: AP23
+old: Aruba AP-325 (17) - new: AP24
+copy of new json wrote to accessPoints.new.20181217t080936.json
+accessPoints.new.20181217t080936.json is 11282 bytes
+```
 
 # license
 
